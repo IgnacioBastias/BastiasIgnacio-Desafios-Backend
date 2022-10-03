@@ -17,16 +17,19 @@ class Contenedor {
 
         const dato = await fs.promises.readFile(nombreArchivo, `utf-8`);
         const productos = JSON.parse(dato);
+        const newId = productos[productos.length - 1].id +1;
 
         const producto = {
             title: nuevoProducto.title,
             price: nuevoProducto.price,
-            id: productos[productos.length - 1].id + 1,
+            id: newId,
         }
 
         productos.push(producto);
 
         await fs.promises.writeFile(nombreArchivo, JSON.stringify(productos, null, '\t'));
+
+        return (newId)
     }
 
     getById = async (id) => {
@@ -89,8 +92,14 @@ const contenedor1 = new Contenedor(nombreArchivo);
 
 // AGREGO UN NUEVO PRODUCTO
 // contenedor1.save({
+
 //     title: "Xiaomi Redmi",
 //     price: 12000,
+
+// }).then((data) => {
+
+//     console.log(data)
+
 // });
 
 
