@@ -1,0 +1,24 @@
+{
+  "name": "desafios-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon Desafio3/servidorExpres.js",
+    "start": "node Desafio3/servidorExpres.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnacioBastias/BastiasIgnacio-Desafios-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgnacioBastias/BastiasIgnacio-Desafios-Backend/issues"
+  },
+  "homepage": "https://github.com/IgnacioBastias/BastiasIgnacio-Desafios-Backend#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
