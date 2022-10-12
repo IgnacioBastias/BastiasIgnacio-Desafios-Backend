@@ -6,8 +6,6 @@ const app = express();
 const PORT = 8080;
 const nombreArchivo = "./productosExpress.json";
 
-let productos = [];
-let idRandom = 0;
 
 const between = (max, min) => {
     return Math.floor(Math.random() * (max - min) + min)
@@ -85,9 +83,7 @@ app.get('/productoRandom', (req, res) => {
 
     contenedor1.getAll().then((data) => {
 
-        productos = data;
-        console.log(productos.length)
-        idRandom = between(1, productos.length);
+        let idRandom = between(1, data.length);
 
         contenedor1.getById(idRandom).then((productoRandom) => {
 
