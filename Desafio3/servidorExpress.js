@@ -80,7 +80,6 @@ app.get('/productos', (req, res) => {
 
 app.get('/productoRandom', (req, res) => {
 
-
     contenedor1.getAll().then((data) => {
 
         let idRandom = between(1, data.length);
@@ -90,9 +89,7 @@ app.get('/productoRandom', (req, res) => {
             res.send(productoRandom)
 
         });
-
     });
-
 })
 
 
