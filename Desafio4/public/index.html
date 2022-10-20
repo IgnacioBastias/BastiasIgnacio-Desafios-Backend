@@ -1,15 +1,32 @@
-<div>
-    <ul>
-      <li>
-        <label>Nombre:</label>
-        <input type="text" name="nombre">
-      </li>
-      <li>
-        <label>Precio:</label>
-        <input type="text" name="apellido">
-      </li>
-      <li class="button">
-        <button type="button" >Send</button>
-      </li>
-    </ul>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carga de Productos</title>
+
+</head>
+
+<body>
+
+  <form action="/api/productos" method="post">
+    <fieldset>Nuevo producto
+      <br><br>
+      <label for="title">
+        <input type="text" id="title" name="title" placeholder="Nombre ">
+      </label>
+      <br><br>
+      <label for="price">
+        <input type="number" id="price" name="price" placeholder="Precio">
+      </label>
+      <br><br>
+      <button type="submit">Cargar producto</button>
+    </fieldset>
+  </form>
+
+</body>
+
+</html>
