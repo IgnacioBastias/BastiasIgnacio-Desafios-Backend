@@ -3,9 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 
 class ProductosApi {
     constructor() {
-        this.productos = [
-            { title: 'remera', price: 120, id: uuidv4(), url: 'https://cdn3.iconfinder.com/data/icons/fashion-beauty-vol-1/512/t-shirt_shirt_tee_fashion-512.png' }
-        ]
+        this.productos = []
     }
 
     exist(id) {

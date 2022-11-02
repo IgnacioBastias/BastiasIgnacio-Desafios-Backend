@@ -25,6 +25,7 @@ const mostrarMensaje = (mensaje) => {
 const mostrarProductos = (productsData) => {
 
     console.log(productsData);
+    divProductos.innerHTML = '';
 
     productsData.forEach(producto => {
 
@@ -45,8 +46,6 @@ const mostrarProductos = (productsData) => {
 form.addEventListener('submit', (ev) => {
 
     ev.preventDefault();
-
-    console.log("active el listener del front")
 
     const nuevoProducto = {
         title: title.value,

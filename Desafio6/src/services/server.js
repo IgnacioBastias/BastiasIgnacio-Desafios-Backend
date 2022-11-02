@@ -35,9 +35,6 @@ const formatMensaje = (username, text) => {
 
 io.on('connection', (socket) => {
 
-    let productsData = ProductosController.getAll();
-    io.emit('productsData', productsData);
-
     socket.on('cargaProduct', (data) => {
 
         const nuevoProducto = {
@@ -48,6 +45,9 @@ io.on('connection', (socket) => {
         }
 
         ProductosController.save(nuevoProducto);
+
+        productsData = ProductosController.getAll();
+        io.emit('productsData', productsData);
     });
 
     socket.emit('mensaje', formatMensaje('Chat Bot', `!Bienvenido al chat!`));
@@ -63,7 +63,6 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         socket.broadcast.emit('mensaje', formatMensaje('Chat Bot', 'Un usuario abandono el chat'));
     });
-
 });
 
 app.use((err, req, res, next) => {
