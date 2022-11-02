@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
 const http = require('http');
-const io = require('socket.io');
+const socketio = require('socket.io');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const moment = require('moment');
 const { ProductosController } = require('../controller/productos')
 const viewsFolderPath = path.resolve(__dirname, '../../views');
-const myHTTPServer = http.createServer (app);
-const myWebSocketServer = io(myHTTPServer)
+const myHTTPServer = http.createServer(app);
+const io = socketio(myHTTPServer)
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -19,9 +19,10 @@ app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
 
-    const productos = ProductosController.getAll();
+    // const productos = ProductosController.getAll();
 
-    res.render('index', { productos });
+    // res.render('index', { productos });
+    res.render('index');
 });
 
 const formatMensaje = (username, text) => {
@@ -32,7 +33,10 @@ const formatMensaje = (username, text) => {
     };
 }
 
-myWebSocketServer.on('connection', (socket) => {
+io.on('connection', (socket) => {
+
+    let productsData = ProductosController.getAll();
+    io.emit('productsData', productsData);
 
     socket.on('cargaProduct', (data) => {
 
@@ -42,11 +46,9 @@ myWebSocketServer.on('connection', (socket) => {
             id: uuidv4(),
             url: data.url
         }
+
         ProductosController.save(nuevoProducto);
-
     });
-
-    socket.join("chat room");
 
     socket.emit('mensaje', formatMensaje('Chat Bot', `!Bienvenido al chat!`));
 
@@ -54,12 +56,14 @@ myWebSocketServer.on('connection', (socket) => {
 
     socket.on('chatMensaje', (userMsj) => {
 
-        socket.emit('mensaje', formatMensaje(userMsj.email || 'Usuario anonimo', userMsj.msg))
+        io.emit('mensaje', formatMensaje(userMsj.email || 'Usuario anonimo', userMsj.msg));
+
     });
 
     socket.on('disconnect', () => {
         socket.broadcast.emit('mensaje', formatMensaje('Chat Bot', 'Un usuario abandono el chat'));
     });
+
 });
 
 app.use((err, req, res, next) => {
