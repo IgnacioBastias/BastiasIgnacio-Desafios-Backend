@@ -1,0 +1,31 @@
+[
+	{
+		"id": "584f50ab-a0d9-41ea-8753-6b803145a5a5",
+		"productos": [
+			{
+				"title": "Buzo",
+				"price": "500",
+				"id": "034236b7-1760-40f3-9b13-5432f94ecbea",
+				"cantidad": "3"
+			},
+			{
+				"title": "Remera",
+				"price": "100",
+				"id": "e0f97ba8-90d1-4bc5-9a3c-d4aaa2508aca",
+				"cantidad": "1"
+			}
+		]
+	},
+	{
+		"id": "63e8bc4c-a5fe-4935-bc97-5df6b7b35223",
+		"timestamp": "2022-11-07T20:37:41.382Z",
+		"productos": [
+			{
+				"title": "Remera",
+				"price": "100",
+				"id": "e0f97ba8-90d1-4bc5-9a3c-d4aaa2508aca",
+				"cantidad": "1"
+			}
+		]
+	}
+]

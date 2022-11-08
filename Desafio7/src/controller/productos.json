@@ -1,0 +1,31 @@
+[
+	{
+		"title": "Remera",
+		"price": "500",
+		"id": "e0f97ba8-90d1-4bc5-9a3c-d4aaa2508aca",
+		"codigo": "f14eaf4b-81d0-48c2-aafa-b528628e250f",
+		"stock": "10",
+		"descripcion": "Remera azul",
+		"timestamp": "2022-11-06T15:08:31.051Z",
+		"img": "https://cdn3.iconfinder.com/data/icons/fashion-beauty-vol-1/512/hoodie_clothes_hoody_wear-512.png"
+	},
+	{
+		"title": "Buzo",
+		"price": "900",
+		"id": "034236b7-1760-40f3-9b13-5432f94ecbea",
+		"codigo": "e1e19661-6edf-483b-9477-85ad6fc274ae",
+		"stock": "15",
+		"descripcion": "Buzo negro",
+		"timestamp": "2022-11-06T16:40:47.074Z",
+		"img": "https://cdn4.iconfinder.com/data/icons/summer-401/512/clothes-hawaiian_shirt-shirt-fashion-garment-hawaiian-clothing-holidays-512.png"
+	},
+	{
+		"title": "Camisa",
+		"price": "500",
+		"id": "6ef804cb-4eed-43b2-91d9-1067a4a1df26",
+		"codigo": "0619557b-55e1-4d02-a137-ed2dff32fe9c",
+		"stock": "12",
+		"descripcion": "Camisa hawaiana",
+		"timestamp": "2022-11-07T20:23:03.173Z"
+	}
+]

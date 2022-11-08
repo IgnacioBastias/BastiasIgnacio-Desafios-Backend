@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 class ProductosApi {
     constructor() {
         this.productos = [
-            { id: uuidv4(), title: 'remera', price: 120 }
+            { id: uuidv4(), title: 'remera', price: "120" }
         ]
     }
 
