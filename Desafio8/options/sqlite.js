@@ -1,6 +1,6 @@
 var optionsSqlite3  = {
     client: 'sqlite3',
-    connection: { filename: './DB/mydb.sqlite' }, 
+    connection: { filename: './DB/ecommerce.sqlite' }, 
     useNullAsDefault: true,
   };
 
