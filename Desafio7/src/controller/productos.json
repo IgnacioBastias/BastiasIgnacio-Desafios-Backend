@@ -27,5 +27,15 @@
 		"stock": "12",
 		"descripcion": "Camisa hawaiana",
 		"timestamp": "2022-11-07T20:23:03.173Z"
+	},
+	{
+		"title": "buzo",
+		"price": "500",
+		"id": "16bb138a-1e3a-4299-a736-b1d6329961f5",
+		"codigo": "a7936c27-bebd-4b55-978e-af04fa3e91e0",
+		"stock": "12",
+		"descripcion": "rojo",
+		"timestamp": "2022-11-28T21:38:01.520Z",
+		"img": "https://cdn3.iconfinder.com/data/icons/fashion-beauty-vol-1/512/hoodie_clothes_hoody_wear-512.png"
 	}
 ]
