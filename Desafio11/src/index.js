@@ -1,6 +1,6 @@
-const Server = require('./services/server');
+import Server from './services/server.js';
 
-const PORT = 3000;
+const PORT = 8080;
 
 Server.listen(PORT, () => {
     console.log('Server escuchando en el puerto', PORT);
