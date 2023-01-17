@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
 router.get('/info', (req, res) => {
 
     logger.info(`Ruta: ${req.url}`,`Metodo: ${req.method}`);
-    console.log('test test');
+    
     res.json({
         NumeroDeCPUs: CPUs,
         SistemaOperativo: process.platform,
